@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    --card-bg-color: rgb(50, 50, 50);
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border-radius: 4px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.lazy-load {
+    background-image: linear-gradient(90deg, rgba(40,80,60,1), rgba(60,80,120,0.5), rgba(40,80,60,1));
+    background-size: 200% 200%;
+    animation: lazy-load 1.5s linear infinite;
+}
+
+@keyframes lazy-load {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex.view-mobile {
+        flex-direction: row;
+    }
+    .flex.view-mobile-column {
+        flex-direction: column;
+    }
+}
+/* FLEX */
+
+/* basic */
+.fillwidth {
+    width: 100%;
+}
+.fillheight {
+    height: 100%;
+}
+/* flex */
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+.flex.row {
+    flex-direction: row;
+}
+.flex.center {
+    justify-content: center;
+    align-items: center;
+}
+.flex.space-between {
+    justify-content: space-between;
+}
+.flex.space-around {
+    justify-content: space-around;
+}
+.flex.space-evenly {
+    justify-content: space-evenly;
+}
